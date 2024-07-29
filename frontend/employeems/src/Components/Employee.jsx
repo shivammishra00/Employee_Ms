@@ -68,8 +68,10 @@ function Employee() {
                                         <td>{d.email}</td>
                                         <td>{d.salary}</td>
                                         <td>{d.address}</td>
-                                        <td><img src={`http://localhost:5001/Images/` + d.image}
-                                            className='employee_image' alt='product img' /></td>
+                                        <td>
+                                            <img src={`http://localhost:5001/Images/` + d.image}
+                                                className='employee_image' alt='product img' />
+                                        </td>
 
                                         <td>
                                             <Link to={`/dashboard/edit_employee/` + d.eid} className='btn btn-info btn-sm me-2'>Edit</Link>

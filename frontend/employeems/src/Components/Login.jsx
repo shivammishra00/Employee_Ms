@@ -5,7 +5,7 @@ import './style.css';
 import { useNavigate } from 'react-router-dom';
 
 function Login() {
-  const [valuse, setvalues] = useState({
+  const [values, setvalues] = useState({
     email: "",
     password: ""
   })
@@ -16,7 +16,7 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post("http://localhost:5001/savedata", valuse)
+    axios.post("http://localhost:5001/savedata", values)
       .then((res) => {
         console.log(res)
         if (res.data.loginStatus) {
@@ -41,12 +41,12 @@ function Login() {
           <Form.Group className='mb-3'>
             <lable htmlFor="email"><strong>Email </strong></lable><br />
             <Form.Control type='email' placeholder='Enter Email' name='email'
-              className='form-control-rounded-0' value={valuse.email} onChange={(e) => setvalues({ ...valuse, [e.target.name]: e.target.value })} />
+              className='form-control-rounded-0' value={values.email} onChange={(e) => setvalues({ ...values, [e.target.name]: e.target.value })} />
           </Form.Group>
           <Form.Group className='mb-3'>
             <lable htmlFor="password"><strong>Password </strong></lable><br />
             <Form.Control type='password' placeholder='Enter Password' name='password'
-              className='form-control-rounded-0' value={valuse.password} onChange={(e) => setvalues({ ...valuse, [e.target.name]: e.target.value })} />
+              className='form-control-rounded-0' value={values.password} onChange={(e) => setvalues({ ...values, [e.target.name]: e.target.value })} />
           </Form.Group>
           <button type='submit' className='btn btn-success w-100 rounded-0 mb-2'>Log in</button>
           <Form.Group className="mb-3" controlId="formBasicCheckbox">

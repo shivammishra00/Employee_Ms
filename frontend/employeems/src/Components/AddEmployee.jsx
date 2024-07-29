@@ -34,7 +34,7 @@ function AddEmployee() {
             .catch(err => console.log(err))
     }, [])
 
-    
+
     const handleSubmit = (e) => {
         e.preventDefault();
         const formdata = new FormData();

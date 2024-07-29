@@ -21,8 +21,8 @@ function EmployeeLogin() {
             .then((res) => {
                 console.log(res)
                 if (res.data.loginStatus) {
-                    localStorage.setItem("valid", true) //stor the valid jab login successful ho 
-                    navigate("/employee_detail/"+res.data.eid)
+                    localStorage.setItem("valid", true) //store the valid jab login successful ho 
+                    navigate(`/employee_detail/`+res.data.eid)
                 }
                 else {
                     seterror(res.data.Error)

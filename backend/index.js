@@ -14,7 +14,7 @@ app.use(cookieParser());
 
 const adminRouter = require('./Route/empRoute/adminRoute.js');
 const categoryRouter = require('./Route/empRoute/categoryRoute.js')
-const  empRouter = require('./Route/empRoute/employeeRoute.js')
+const empRouter = require('./Route/empRoute/employeeRoute.js')
 const verifyRoute = require('./Route/empRoute/verifyUserRoute.js')
 app.use("/", adminRouter)
 app.use("/", categoryRouter)
